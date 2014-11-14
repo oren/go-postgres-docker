@@ -1,0 +1,24 @@
+{
+  "name": "labs",
+  "version": "1.0.0",
+  "description": "This project is the website for labs.yp.com   The web server is written in Go.   The server serves the HTML on root / and also have a few HTTP endpoints that returns JSON.",
+  "scripts": {
+    "build-js": "browserify static/main.js -o static/bundle.js",
+    "watch": "watchify static/main.js -o static/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@stash.int.yp.com/~rcollins/labs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nightwatch": "^0.5.32",
+    "watchify": "^1.0.3"
+  },
+  "dependencies": {
+    "browserify": "^5.12.1",
+    "form-serialize": "^0.3.0",
+    "xhr": "^1.16.1"
+  }
+}

@@ -1,0 +1,13 @@
+# https://registry.hub.docker.com/_/golang/
+FROM debian:wheezy
+
+RUN apt-get update && apt-get install -y \
+  postgresql-client
+  --no-install-recommends \
+  && rm -rf /var/lib/apt/lists/*
+
+ADD db/setup.sql /
+RUN useradd -ms /bin/bash developer
+USER developer
+
+CMD psql -h db -U postgres < setup.sql
