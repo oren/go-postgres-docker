@@ -1,5 +1,8 @@
 pwd := $(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
+foo:
+	echo $(pwd)
+
 test-browser:
 	docker exec -it web_server ./node_modules/.bin/nightwatch
 
