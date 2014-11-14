@@ -1,6 +1,5 @@
-CREATE ROLE developer with LOGIN PASSWORD developer;
+CREATE USER developer WITH PASSWORD 'secretpass';
 CREATE DATABASE website;
-ALTER DATABASE website OWNER developer;
 
 CREATE TABLE contacts (
     name       varchar(50) NOT NULL,
@@ -8,4 +7,4 @@ CREATE TABLE contacts (
     message    varchar(1000) NOT NULL
 );
 
-
+ALTER DATABASE website OWNER TO developer;
