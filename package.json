@@ -1,17 +1,24 @@
 {
-  "name": "labs",
+  "name": "go-postgres-docker",
   "version": "1.0.0",
-  "description": "This project is the website for labs.yp.com   The web server is written in Go.   The server serves the HTML on root / and also have a few HTTP endpoints that returns JSON.",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
-    "build-js": "browserify static/main.js -o static/bundle.js",
-    "watch": "watchify static/main.js -o static/bundle.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@stash.int.yp.com/~rcollins/labs.git"
+    "url": "https://github.com/oren/go-postgres-docker.git"
   },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oren/go-postgres-docker/issues"
+  },
+  "homepage": "https://github.com/oren/go-postgres-docker",
   "devDependencies": {
     "nightwatch": "^0.5.32",
     "watchify": "^1.0.3"
