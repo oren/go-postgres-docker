@@ -1,0 +1,11 @@
+image: mischief/docker-golang
+env:
+  - GOPATH=/var/cache/drone
+script:
+  - go get
+  - go build
+  - go test -v
+notify:
+  email:
+    recipients:
+      - orengolan@gmail.com
